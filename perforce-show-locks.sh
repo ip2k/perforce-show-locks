@@ -41,7 +41,7 @@ echo "$locks"
 echo
 echo -e "\e[92mJobs using the above locked DBs"
 echo -e "================================\e[39m"
-echo -e "\e[32mPID	STATUS	OWNER	RUNTIME(hh:mm:ss)	CMD	[ARGS]\e[39m  REF: http://go/p4mon"
+echo -e "\e[32mPID	STATUS	OWNER	RUNTIME(hh:mm:ss)	CMD	[ARGS]\e[39m"
 for pid in $lock_pids; do
   p4_jobs=$(grep $pid p4ms)
   if [ ${#p4_jobs} -gt 0 ]; then
